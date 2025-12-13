@@ -8,6 +8,7 @@ local executors = {
   javascript = "node %",
   c = "gcc % -o %:r && ./%:r",
   cpp = "g++ -std=c++17 % -o %:r && ./%:r",
+  rust = "rustc % -o %:r && ./%:r",
   fortran = "gfortran % -o %:r && ./%:r",
   sh = "bash %",
 }

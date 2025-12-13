@@ -48,11 +48,15 @@ map("c", "Q", "q!", { desc = "forced quit " })
 map("v", "(", "c()<Left><Esc>p", { desc = "Surround selection with ()" })
 map("v", "'", "c''<Left><Esc>p", { desc = "Surround selection with ()" })
 map("v", '"', 'c""<Left><Esc>p', { desc = "Surround selection with ()" })
-map("v", "<", "c<><Left><Esc>p", { desc = "Surround selection with ()" })
+-- map("v", "<", "c<><Left><Esc>p", { desc = "Surround selection with ()" })
 
 -- タブ操作
 map("n", "<A-l>", "<cmd>BufferLineCycleNext<cr>", { desc = "Next buffer" })
 map("n", "<A-h>", "<cmd>BufferLineCyclePrev<cr>", { desc = "Prev buffer" })
+
+-- 行末に;追加
+map("n", "<A-;>", "<Esc>A;<Esc>", { desc = "Insert a semicolon at the end of the line" })
+map("i", "<A-;>", "<Esc>A;", { desc = "Insert a semicolon at the end of the line" })
 
 -- 作成した runner.lua モジュールを読み込む
 local runner = require("runner")

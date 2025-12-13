@@ -6,7 +6,7 @@ return {
         style = "cool",
         colors = {
           fg = "#dcdfe4",
-          -- bg0 = "#202734",
+          bg0 = "#202734",
         },
         highlights = {
           -- 検索にヒットしたすべての箇所のハイライト (Tokyonightの青)

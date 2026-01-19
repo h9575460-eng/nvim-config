@@ -28,8 +28,8 @@ map("n", "H", "H", { desc = "Move top" })
 map("n", "L", "L", { desc = "Move bottm" })
 
 -- 挿入モード: <C-c>でEsc
-map("i", "<C-c>", "<Esc>", { desc = "Exit Insert Mode" })
-map("v", "<C-c>", "<Esc>", { desc = "Exit Visual Mode" })
+map({ "i", "v", "s" }, "<C-c>", "<Esc>", { desc = "Exit Insert Mode" })
+-- map("v", "<C-c>", "<Esc>", { desc = "Exit Visual Mode" })
 
 -- ノーマルモード: ヤンクレジスタ(0)からペースト
 map("n", "yp", '"0p', { desc = "Paste from Yank Register (After)" })

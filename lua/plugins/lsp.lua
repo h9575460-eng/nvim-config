@@ -9,6 +9,7 @@ return {
             -- ここで明示的に K を 5k に設定します。
             -- これにより、LSPが起動しているバッファでも確実に 5k が優先されます。
             { "K", "5k", desc = "Up 5 lines" },
+            { "<C-k>", false, mode = "i" },
 
             -- ドキュメント表示は gh に逃がします
             -- { "gh", vim.lsp.buf.hover, desc = "Hover" },

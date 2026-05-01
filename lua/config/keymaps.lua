@@ -46,9 +46,11 @@ map("c", "Q", "q!", { desc = "forced quit " })
 
 -- ビジュアルモード: 選択範囲を()で囲む
 map("v", "(", "c()<Left><Esc>p", { desc = "Surround selection with ()" })
-map("v", "'", "c''<Left><Esc>p", { desc = "Surround selection with ()" })
-map("v", '"', 'c""<Left><Esc>p', { desc = "Surround selection with ()" })
--- map("v", "<", "c<><Left><Esc>p", { desc = "Surround selection with ()" })
+map("v", "'", "c''<Left><Esc>p", { desc = "Surround selection with ''" })
+map("v", '"', 'c""<Left><Esc>p', { desc = 'Surround selection with ""' })
+map("v", "g{", "c{}<Left><Esc>p", { desc = "Surround selection with {}" })
+map("v", "g[", "c[]<Left><Esc>p", { desc = "Surround selection with []" })
+map("v", "g<", "c<><Left><Esc>p", { desc = "Surround selection with <>" })
 
 -- タブ操作
 map("n", "<A-l>", "<cmd>BufferLineCycleNext<cr>", { desc = "Next buffer" })

@@ -7,3 +7,9 @@ foo.*
 *.log
 data
 .git/
+LICENSE
+.gitignore
+.neoconf.json
+lazy-lock.json
+lazyvim.json
+README.md

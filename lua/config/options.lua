@@ -6,13 +6,20 @@ vim.opt.relativenumber = false
 vim.opt.number = true
 
 -- デフォルトのターミナルをmsys2のbashにする
+-- if vim.fn.has("win32") == 1 then
+--   vim.opt.shell = "C:\\msys64\\usr\\bin\\bash.exe"
+--
+--   -- シェルに渡すフラグ（bashの場合は -c）
+--   vim.opt.shellcmdflag = "-c"
+--
+--   -- クォート設定（Windowsでの挙動を安定させるため空にする）
+--   vim.opt.shellquote = ""
+--   vim.opt.shellxquote = ""
+-- end
+
+-- MSYS2環境から起動した際のシェル設定の不整合を修正
 if vim.fn.has("win32") == 1 then
-  vim.opt.shell = "C:\\msys64\\usr\\bin\\bash.exe"
-
-  -- シェルに渡すフラグ（bashの場合は -c）
-  vim.opt.shellcmdflag = "-c"
-
-  -- クォート設定（Windowsでの挙動を安定させるため空にする）
-  vim.opt.shellquote = ""
-  vim.opt.shellxquote = ""
+  vim.opt.shell = "cmd.exe"
+  vim.opt.shellcmdflag = "/s /c"
+  vim.opt.shellxquote = '"'
 end

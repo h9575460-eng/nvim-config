@@ -20,6 +20,7 @@ map("n", "U", "<C-r>", { desc = "Redo" })
 map("n", "Y", "Vy", { desc = "yank line" })
 map("n", "ya", "goVGy<C-o>", { desc = "yank all lines" })
 map("n", "S", "Vc", { desc = "vim keybind" })
+map("n", "+", ",", { desc = "reverse when f command" })
 
 -- ノーマル・ビジュアルモード: 5行移動
 map({ "n", "v" }, "J", "5j", { desc = "Move Down 5 Lines" })
@@ -69,7 +70,12 @@ map("n", "<leader>r", function()
 end, { desc = "Code Runner" })
 
 --  ターミナルを開閉
-map({ "n", "t" }, "<C-/>", function()
-  local term = get_terminal()
-  term:toggle()
-end, { desc = "Toggle Terminal" })
+-- map({ "n", "t" }, "<C-/>", function()
+--   local bash_cmd = { "C:\\msys64\\usr\\bin\\bash.exe", "--login" }
+--
+--   if type(Snacks) ~= "nil" then
+--     Snacks.terminal.toggle(bash_cmd)
+--   else
+--     require("lazy.util").terminal(bash_cmd)
+--   end
+-- end, { desc = "Toggle Terminal (Bash)" })

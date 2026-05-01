@@ -19,7 +19,7 @@ local function get_terminal()
     return term
   end
 
-  term = Snacks.terminal(nil, {
+  term = Snacks.terminal("C:\\msys64\\usr\\bin\\bash.exe --login", {
     win = {
       position = "bottom",
       height = 0.4,

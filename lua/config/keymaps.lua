@@ -20,7 +20,7 @@ map("n", "U", "<C-r>", { desc = "Redo" })
 map("n", "Y", "Vy", { desc = "yank line" })
 map("n", "ya", "goVGy<C-o>", { desc = "yank all lines" })
 map("n", "S", "Vc", { desc = "vim keybind" })
-map("n", "+", ",", { desc = "reverse when f command" })
+map("n", "+", ",", { desc = "reverse when f command", remap = true })
 
 -- ノーマル・ビジュアルモード: 5行移動
 map({ "n", "v" }, "J", "5j", { desc = "Move Down 5 Lines" })

@@ -27,6 +27,8 @@ map({ "n", "v" }, "J", "5j", { desc = "Move Down 5 Lines" })
 map({ "n", "v" }, "K", "5k", { desc = "Move Up 5 Lines" })
 map("n", "H", "H", { desc = "Move top" })
 map("n", "L", "L", { desc = "Move bottm" })
+map("n", "zk", "z<CR>", { desc = "Move top the line" })
+map("n", "zj", "zb", { desc = "Move bottm the line" })
 
 -- 挿入モード: <C-c>でEsc
 map({ "i", "v", "s" }, "<C-c>", "<Esc>", { desc = "Exit Insert Mode" })
